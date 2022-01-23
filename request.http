@@ -1,0 +1,6 @@
+### Searched GIFs
+http://localhost:3000/searched_gifs.json
+
+
+### Trending GIFs
+http://localhost:3000/trending_gifs.json

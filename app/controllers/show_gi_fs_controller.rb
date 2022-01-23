@@ -1,2 +1,0 @@
-class ShowGiFsController < ApplicationController
-end
