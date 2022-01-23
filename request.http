@@ -4,3 +4,7 @@ http://localhost:3000/searched_gifs.json
 
 ### Trending GIFs
 http://localhost:3000/trending_gifs.json
+
+
+### Translate GIFs
+http://localhost:3000/translate_gifs.json
