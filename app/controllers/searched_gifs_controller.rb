@@ -1,9 +1,14 @@
 class SearchedGifsController < ApplicationController
   def show
     require "http"
-    response = HTTP.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=#{Rails.application.credentials.giphy_api_key}&limit=5")
+    
+    limit = 5
+    keyword_inputs = params[:keywords]
+    search_words = keyword_inputs.gsub(" ", "+")
+
+    response = HTTP.get("http://api.giphy.com/v1/gifs/search?q=#{search_words}&api_key=#{Rails.application.credentials.giphy_api_key}&limit=#{limit}")
     buffer = response.body
-    parsedResponse = JSON.parse(buffer)
-    render json: parsedResponse
+    parsed_response = JSON.parse(buffer)
+    render json: parsed_response
   end
 end
